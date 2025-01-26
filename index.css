@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    direction: rtl;
+}
+#mm {
+    border-radius: 50%;
+}
+.container {
+    width: 1240px;
+    max-width: 100%;
+}
+body {
+    background-color: #0B4F6C;
+    scroll-behavior: smooth;
+    font-family: 'Almarai', sans-serif;
+    
+
+}
+h1, h2, h3 {
+  font-family: 'Almarai', sans-serif;
+  font-weight: 700; /* وزن ثقيل للعناوين */
+}
+p {
+  font-family: 'Almarai', sans-serif;
+  font-weight: 400; /* وزن عادي للنصوص */
+}
+  
+   #imge {
+    transition: transform 0.4s ease ;
+   }
+  
+  #imge:hover {
+    content: url(./imge/468402022_589018750311401_3593630457666160545_n.jpg);
+    transform: scale(1.05s) ;
+  }
+  h3 {
+    font-weight: 500;
+  }
+#doctor_one {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+  #doctor_one:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+.imges{
+   background-image: url(./2.jpg);
+      background-size: cover;
+}
+
+  
+
+
