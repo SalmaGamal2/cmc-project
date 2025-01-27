@@ -22,12 +22,10 @@ body {
 }
 h1, h2, h3 {
   font-family: 'Almarai', sans-serif;
-  font-weight: 700; /* وزن ثقيل للعناوين */
-}
+  font-weight: 700; 
 p {
   font-family: 'Almarai', sans-serif;
-  font-weight: 400; /* وزن عادي للنصوص */
-}
+  font-weight: 400; 
   
    #imge {
     transition: transform 0.4s ease ;
