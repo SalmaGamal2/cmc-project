@@ -7,9 +7,23 @@
 body {
 
   direction: rtl;
-    background-color:#0B4F6C ;
+    /* background-color:#0B4F6C ; */
+    background-color:#b4d7e679 ;
 
 }
+/* font family  */
+h1,
+h2,
+h3 {
+  font-family: 'Almarai', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Almarai', sans-serif;
+  font-weight: 400;
+}
+/* doctors section  */
 .home {
     display: flex;
     justify-content: center;
@@ -57,7 +71,7 @@ body {
     font-size: 1.6rem;
     color: #6c757d;
   }
-  .ht {
+  .drinfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,6 +137,7 @@ body {
 #show-more:checked ~ #extra_service {
   display: block;
 }
+/* service section two  */
 
 #big_font {
   transition: 5.s ease-in-out;
@@ -160,6 +175,7 @@ body {
   font-size: 14px;
   color: rgb(212, 211, 211);
 }
+/* about spcilest  */
 #spcial_card {
 transition: 0.3s;
 }
@@ -183,7 +199,7 @@ transition: 0.3s;
   }
 }
 
-.clients{
+/* .clients{
 	background-image:url('img/client-bg.jpg');
 	background-size:cover;
 	background-position:center;
@@ -197,12 +213,15 @@ transition: 0.3s;
 	text-align: center;
 	float: none;
 	padding: 0 35px;
-}
+} */
+
+ /* about adress  */
 .font {
   font-size: 20px;
   line-height: 1.5;
   color: #6c757d;
 }
+/* about section 4  */
 .why {
   font-size: 14px;
   color: #6c757d;
@@ -216,6 +235,7 @@ transition: 0.3s;
   letter-spacing: -3px;
   margin: 0;
 }
+/* about section 3  */
 /* From Uiverse.io by Pravins01 */ 
 .card {
   position: relative;
@@ -353,10 +373,12 @@ transition: 0.3s;
 #place:hover {
   transform: scale(1.2);
 }
+/* appointment hover  */
 #heart {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-#heart:hover {
+
+.texthov:hover #heart {
   transform: scale(1.2); 
   opacity: 0.8;
     
@@ -364,6 +386,7 @@ transition: 0.3s;
 @media (max-width: 768px) {
 .place:hover {
       transform: none; 
+}
 }
 
 
@@ -375,18 +398,100 @@ transition: 0.3s;
   transform: scale(1.2); 
   opacity: 0.8;
 }
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin: 20px auto;
+/* contact  */
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+  
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
 }
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* اراء العملاء */
+.font-testmoni {
+  font-size: 20px;
+  color: #0B4F6C;
+  transition: 0.3s ease-in-out;
+}
+.font-testmoni:hover {
+  transform: rotate(1turn);
+}
+/* التعاقدات في الخدمات  */
+.scrol {
+  overflow: hidden;
+  position: relative;
+}
+.scrol-wrap {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.scrol-content {
+  animation: scrol-left 20s linear infinite ;
+}
+.scrol-image {
+  height: auto;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+@keyframes scrol-left {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
