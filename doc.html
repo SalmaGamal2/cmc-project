@@ -36,6 +36,7 @@
 
     <title>cmc لرعايه مرضي القلب</title>
   </head>
+  <body>
   <div class="container">
     <div id="Example" class="carousel slide bg-light" data-bs-ride="carousel">
       <!-- Slides -->
@@ -50,6 +51,7 @@
       </div>
     </div>
     <!-- information input  -->
+      
     <section class="bg-light py-4">
       <div class="container">
         <div class="text-center mb-3">
@@ -58,7 +60,7 @@
         <div class="row">
           <div class="col-md-6 col-12">
             <div class="group-form">
-              <input type="text" placeholder="name" class="form-control pt-3" />
+              <input id="name" type="text" placeholder="name" class="form-control pt-3" />
             </div>
           </div>
           <div class="col-md-6 col-12">
@@ -68,7 +70,7 @@
           </div>
           <div class="col-md-6 col-12">
             <div class="group-form">
-              <select name="doctors" class="form-select pt-4 mt-3">
+              <select name="doctors" class="form-select pt-4 mt-3" id="prescription">
                 <option selected>treatment</option>
                 <option>glimpacre plus</option>
                 <option>ketolac</option>
@@ -100,15 +102,24 @@
               </select>
             </div>
           </div>
-          <div class="col-md-6 col-12">
+          <div class="col-md-6 col-12" id="age">
             <div class="group-form">
               <input
                 type="text"
                 placeholder="age"
-                class="form-control pt-4 mt-3"
-              />
+                class="form-control pt-4 mt-3">
+              
             </div>
           </div>
+          <div class="d-flex flex-column ">
+          <div class="col-md-6">
+            <button onclick="show()" class="btn btn-outline-primary w-25 mt-5">show</button>
+          </div>
+          <div class="col-md-6">
+            <button onclick="print()" class="btn btn-outline-primary w-25 mt-3">print</button>
+          </div>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -121,9 +132,13 @@
       </div>
       <hr />
       <div class="details">
-        <p><strong>اسم المريض:</strong>_______________________</p>
-        <p><strong>التاريخ:</strong>__________________________</p>
-        <p><strong>العمر:</strong>__________________________</p>
+        <!-- <p id="patientName" ><strong>اسم المريض:</strong>_______________________</p>
+        <p ><strong>التاريخ:</strong>__________________________</p>
+        <p><strong>العمر:</strong>__________________________</p> -->
+        <p><strong>اسم المريض:</strong> <span id="patientName">_______________________</span></p>
+       <p><strong>التاريخ:</strong> <span id="prescriptionDate">__________________________</span></p>
+        <p><strong>العمر:</strong> <span id="patientAge">__________________________</span></p>
+
       </div>
       <hr />
       <div class="col-6">
@@ -153,7 +168,9 @@
         <p>مع أطيب التمنيات</p>
         <p>www.cmc.com | dr\abdallah aborehab</p>
       </div>
+         
     </div>
-    <body></body>
+    <script src="./doc.js"></script>
+    </body>
   </div>
 </html>

@@ -7,10 +7,11 @@
 body {
 
   direction: rtl;
-    /* background-color:#0B4F6C ; */
     background-color:#b4d7e679 ;
+    overflow-x: hidden;
 
 }
+
 /* font family  */
 h1,
 h2,
@@ -23,6 +24,24 @@ p {
   font-family: 'Almarai', sans-serif;
   font-weight: 400;
 }
+/* carousel caption  */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.329);
+  /* خلفية شفافة سوداء */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.carousel-caption h3 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  color: #ddd;
+}
+
 /* doctors section  */
 .home {
     display: flex;
@@ -44,15 +63,20 @@ p {
   }
   @keyframes floatimage {
     0% {
-        transform: translateY(0);
+        transform: translatey(0);
     }
     50% {
-        transform: translateY(-2.4rem);
+        transform: translatey(-2.4rem);
     }
     100% {
-        transform: translateY(0);
+        transform: translatey(0);
     }
+    
   }
+    #doc-text{
+      animation: float 4s ease-in-out infinite;
+      transition: 0.5s;
+    }
   .home_content {
     margin-left: 5rem;
   }
@@ -71,6 +95,19 @@ p {
     font-size: 1.6rem;
     color: #6c757d;
   }
+    @keyframes float {
+      0% {
+        transform: translatex(0);
+      }
+  
+      50% {
+        transform: translatex(-2.4rem);
+      }
+  
+      100% {
+        transform: translatex(0);
+      }
+    }
   .drinfo {
     display: flex;
     flex-direction: column;
@@ -199,27 +236,16 @@ transition: 0.3s;
   }
 }
 
-/* .clients{
-	background-image:url('img/client-bg.jpg');
-	background-size:cover;
-	background-position:center;
-	padding:100px 0px;
-	position:relative;
-}
-
-.clients .single-clients img {
-	width: 100%;
-	cursor: pointer;
-	text-align: center;
-	float: none;
-	padding: 0 35px;
-} */
-
  /* about adress  */
 .font {
   font-size: 20px;
   line-height: 1.5;
   color: #6c757d;
+}
+@media (max-width: 768px) {
+  #adress-font{
+    font-size: 40px;
+  }
 }
 /* about section 4  */
 .why {
@@ -495,3 +521,12 @@ transition: 0.3s;
       transform: translateX(-100%);
   }
 }
+/* swiper service  */
+
+@media (max-width: 768px) {
+ #swiper-service{
+   font-size: 12px;
+   line-height: 1.5;
+  }
+}
+
